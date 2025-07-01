@@ -25,10 +25,10 @@ KEY_PRICES = {
     'day': 80,   # 80 Rs per day
     'week': 500  # 500 Rs per week
 }
-ADMIN_IDS = [7296948330, 7296948330]
-BOT_TOKEN = "7722236749:AAESscvDrK2ueHLmj9IR93IeKnr-E0kyUM4"
+ADMIN_IDS = [7094215368, 7094215368]
+BOT_TOKEN = "7020534774:AAFYHmLHrz9plmifsYp9QzB7g-JaIkkLGCw"
 thread_count = 900
-packet_size = 9
+packet_size = 10
 ADMIN_FILE = 'admin_data.json'
 last_attack_times = {}
 COOLDOWN_MINUTES = 0
@@ -44,7 +44,7 @@ def check_cooldown(user_id: int) -> tuple[bool, int]:
     last_attack = last_attack_times[user_id]
     current_time = datetime.now()
     time_diff = current_time - last_attack
-    cooldown_seconds = COOLDOWN_MINUTES * 60
+    cooldown_seconds = COOLDOWN_MINUTES * 0
     
     if time_diff.total_seconds() < cooldown_seconds:
         remaining = cooldown_seconds - time_diff.total_seconds()
